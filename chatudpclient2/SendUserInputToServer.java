@@ -58,7 +58,7 @@ public class SendUserInputToServer implements Runnable {
                 socket.send(userDatagram);
             } while (messaggio.compareTo("quit") != 0); //se utente digita quit il tread termina
         } catch (IOException ex) {
-            Logger.getLogger(ChatUDPClient.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ChatUDPClient2.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

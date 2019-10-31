@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Prof Matteo Palitto
+ * @author Umberto Cazzuola
  */
 
 //utilizzo la classe Clients per memorizzare indirizzo e porta dei clients che si collegano al server
