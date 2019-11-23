@@ -36,7 +36,7 @@ class Clients {
 public class UDPEcho implements Runnable {
 
     private DatagramSocket socket;
-    Clients client = new Clients(InetAddress.getByName("0.0.0.0"), 0);
+    Clients client = new Clients(InetAddress.getByName("10.102.0.54"), 0);
 
 
     public UDPEcho(int port) throws SocketException, UnknownHostException {
