@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Umberto Cazzuola 
+ * @author Umberto Cazzuola
  */
 public class ReceiveFromServerAndPrint implements Runnable {
     DatagramSocket socket;
@@ -31,16 +31,13 @@ public class ReceiveFromServerAndPrint implements Runnable {
 
  
         try {
-            // Costruisco il datagram per ricevere i pacchetti inviati dal server
+           
             serverDatagram = new DatagramPacket(buffer, buffer.length);
-            // fino a quando il main non interrompe il thread rimango in ascolto 
+            
             while (!Thread.interrupted()){
-                socket.receive(serverDatagram);  //attendo il prossimo pacchetto da server
-                //converto in string il messaggio contenuto nel buffer
-                received = new String(serverDatagram.getData(), 0, serverDatagram.getLength(), "ISO-8859-1");
-                //e quindi scrivo su schermo il messaggio appena ricevuto
-                System.out.println("> server: " + received);
-                //scrivo anche il prompt nel caso utente voglia digitare un altro messaggio da inviare
+                socket.receive(serverDatagram); 
+                received = new String(serverDatagram.getData(), 0, serverDatagram.getLength(), "ISO-8859-1");              
+                System.out.println("> server: " + received);               
                 System.out.print("> ");
             }
 
